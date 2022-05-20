@@ -7,7 +7,7 @@ use GDO\UI\GDT_Divider;
 use GDO\Javascript\Module_Javascript;
 
 /**
- * This module adds jquery to your application.
+ * This module adds jQuery3.6 to your application.
  * 
  * Comes with a few tiny extensions which can be opt-outed.
  * 
@@ -15,11 +15,11 @@ use GDO\Javascript\Module_Javascript;
  *  - jquery-color for color based animations.
  *  - gdo-effects for some default animations.
  *  
- * @see [Module_Javascript](https://github.com/gizmore/gdo6)
- * @see [gdo6-jquery-autocomplete](https://github.com/gizmore/gdo6-jquery-autocomplete)
+ * @see [Module_Javascript](https://github.com/gizmore/phpgdo-javascript)
+ * @see [Module_JQueryAutocomplete](https://github.com/gizmore/phpgdo-jquery-autocomplete](https://github.com/gizmore/gdo6-jquery-autocomplete)
  *  
  * @author gizmore
- * @version 7.0.0
+ * @version 7.0.1
  * @since 6.0.0
  */
 final class Module_JQuery extends GDO_Module
