@@ -4,7 +4,7 @@ namespace GDO\JQuery;
 use GDO\Core\GDO_Module;
 use GDO\Core\GDT_Checkbox;
 use GDO\UI\GDT_Divider;
-use GDO\Javascript\Module_Javascript;
+use GDO\Core\Module_Core;
 
 /**
  * This module adds jQuery3.6 to your application.
@@ -38,7 +38,6 @@ final class Module_JQuery extends GDO_Module
 			GDT_Checkbox::make('jquery_gdo_effects')->initial('1'),
 		];
 	}
-	
 	public function cfgJqueryModal() : string { return $this->getConfigVar('jquery_modal'); }
 	public function cfgJqueryColor() : string { return $this->getConfigVar('jquery_color'); }
 	public function cfgGDOEffects() : string { return $this->getConfigVar('jquery_gdo_effects'); }
@@ -46,9 +45,9 @@ final class Module_JQuery extends GDO_Module
 	############
 	### Boot ###
 	############
-	public function onIncludeScripts()
+	public function onIncludeScripts() : void
 	{
-		$min = Module_Javascript::instance()->cfgMinAppend();
+		$min = Module_Core::minAppend();
 
 		# jQuery core.
 		$this->addBowerJS("jquery/dist/jquery$min.js");
@@ -77,7 +76,7 @@ final class Module_JQuery extends GDO_Module
 		}
 	}
 	
-	public function getModuleLicenseFilenames()
+	public function getModuleLicenseFilenames() : array
 	{
 	    return [
 	    	'bower_components/jquery/LICENSE.txt',
