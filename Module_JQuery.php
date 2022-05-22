@@ -21,7 +21,7 @@ use GDO\UI\GDT_Divider;
  * @see [Module_JQueryAutocomplete](https://github.com/gizmore/phpgdo-jquery-autocomplete](https://github.com/gizmore/gdo6-jquery-autocomplete)
  *  
  * @author gizmore
- * @version 7.0.1
+ * @version 7.0.0
  * @since 6.0.0
  */
 final class Module_JQuery extends GDO_Module
