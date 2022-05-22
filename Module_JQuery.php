@@ -4,7 +4,6 @@ namespace GDO\JQuery;
 use GDO\Core\GDO_Module;
 use GDO\Core\GDT_Checkbox;
 use GDO\UI\GDT_Divider;
-use GDO\Core\Module_Core;
 
 /**
  * This module adds jQuery3.6 to your application.
@@ -14,7 +13,10 @@ use GDO\Core\Module_Core;
  *  - jquery-modal for very basic alerts and confirms.
  *  - jquery-color for color based animations.
  *  - gdo-effects for some default animations.
- *  
+ * 
+ * @TODO pin yarn's jquery version @link https://phpgdo.com/security/adivsory/1
+ * @TODO make a way to add static urls to pages. (page editor?)
+ * 
  * @see [Module_Javascript](https://github.com/gizmore/phpgdo-javascript)
  * @see [Module_JQueryAutocomplete](https://github.com/gizmore/phpgdo-jquery-autocomplete](https://github.com/gizmore/gdo6-jquery-autocomplete)
  *  
@@ -47,7 +49,7 @@ final class Module_JQuery extends GDO_Module
 	############
 	public function onIncludeScripts() : void
 	{
-		$min = Module_Core::minAppend();
+		$min = $this->cfgMinAppend();
 
 		# jQuery core.
 		$this->addBowerJS("jquery/dist/jquery$min.js");
