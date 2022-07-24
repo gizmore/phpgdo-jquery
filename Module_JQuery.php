@@ -78,7 +78,7 @@ final class Module_JQuery extends GDO_Module
 		}
 	}
 	
-	public function getModuleLicenseFilenames() : array
+	public function getLicenseFilenames() : array
 	{
 	    return [
 	    	'bower_components/jquery/LICENSE.txt',
