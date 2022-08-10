@@ -14,19 +14,20 @@ use GDO\UI\GDT_Divider;
  *  - jquery-color for color based animations.
  *  - gdo-effects for some default animations.
  * 
- * @TODO pin yarn's jquery version @link https://phpgdo.com/security/adivsory/1
+ * @TODO pin yarn's jQuery version @link https://phpgdo.com/security/adivsory/1
  * @TODO make a way to add static urls to pages. (page editor?)
  * 
  * @see [Module_Javascript](https://github.com/gizmore/phpgdo-javascript)
- * @see [Module_JQueryAutocomplete](https://github.com/gizmore/phpgdo-jquery-autocomplete](https://github.com/gizmore/gdo6-jquery-autocomplete)
+ * @see [Module_JQueryAutocomplete](https://github.com/gizmore/phpgdo-jquery-autocomplete](https://github.com/gizmore/phpgdo-jquery-autocomplete)
  *  
  * @author gizmore
- * @version 7.0.0
+ * @version 7.0.1
  * @since 6.0.0
  */
 final class Module_JQuery extends GDO_Module
 {
 	public int $priority = 5;
+	public string $license = 'MIT';
 	
 	##############
 	### Config ###
@@ -67,11 +68,11 @@ final class Module_JQuery extends GDO_Module
 			$this->addBowerCSS("jquery-modal/jquery.modal$min.css");
 		}
 
-		# gdo6 jquery core integration scripts on top.
+		# gdo jquery core integration scripts on top.
 		$this->addJS('js/gdo-jquery.js');
 		$this->addCSS('css/gdo-jquery.css');
 		
-		# gdo6 jquery effects
+		# gdo jquery effects
 		if ($this->cfgGDOEffects())
 		{
 			$this->addJS('js/gdo-effects.js');
@@ -82,7 +83,7 @@ final class Module_JQuery extends GDO_Module
 	{
 	    return [
 	    	'bower_components/jquery/LICENSE.txt',
-	    	'bower_components/jquery-modal/LICENSE.txt',
+	    	'bower_components/jquery-modal/LICENSE',
 	    	'bower_components/jquery-color/LICENSE.txt',
 	    	'LICENSE',
 	    ];

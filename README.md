@@ -1,21 +1,22 @@
-# gdo-jquery
+# phpgdo-jquery
 
-add jQuery assets to your gdo6 application.
+Add jQuery assets and, optionally, some plugins to your
+[GDOv7](https://github.com/gizmore/phpgdo)
+installation.
 
-## Installation
+ - Optionally adds bouncy effects to jQuery.
 
-Clone the module as GDO/JQuery
-
-    cd gdo6/GDO # go to your module folder
-    git clone https://github.com/gizmore/gdo6-jquery JQuery # clone as JQuery
+ - Optionally installs jquery-color + jquery-modal.
 
 
-Install JS dependencies with yarn.
+### phpgdo-jquery: Dependencies
 
-	cd gdo6 # go to gdo6 root
-    ./gdo_yarn.sh # Install all dependencies
-    
+This module has no other GDOv7 dependencies.
 
-Install the module in GDO.
-Go to Admin->Modules->JQuery->Configure.
-Click the Install button.
+[Module_Javascript](https://github.com/gizmore/phpgdo-javascript)
+is recommended to minify your builds.
+
+
+#### phpgdo-jquery: License
+
+This module is MIT and Public Domain.
