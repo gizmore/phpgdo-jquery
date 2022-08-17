@@ -69,7 +69,24 @@ window.GDO.effects.flashGold = function($e) {
 				$e.css('background-color', beforeBG);
 			});			
 		});
-		
+};
+
+window.GDO.effects.buzz = function($e) {
+	return GDO.effects.Sequence($e, {
+			'filter': 'blur(3px)',
+			'gdoOptions': { 
+				duration: 50,
+			}
+		}).then(function() {
+			GDO.effects.Sequence($e, {
+				'filter': 'blur(1px)',
+				'gdoOptions': { 
+					duration: 350,
+				}
+			}).then(function(){
+				$e.css('filter', 'none');
+			});			
+		});
 };
 
 // -------------- //
