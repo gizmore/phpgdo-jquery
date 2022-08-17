@@ -48,6 +48,11 @@ final class Module_JQuery extends GDO_Module
 	############
 	### Boot ###
 	############
+	public function onLoadLanguage() : void
+	{
+		$this->loadLanguage('lang/jquery');
+	}
+	
 	public function onIncludeScripts() : void
 	{
 		$min = $this->cfgMinAppend();
