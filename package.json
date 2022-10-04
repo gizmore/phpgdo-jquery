@@ -1,4 +1,9 @@
 {
+  "name": "phpgdo-jquery",
+  "author": "gizmore",
+  "license": "MIT",
+  "version": "7.0.1",
+  "description": "jQuery assets and utilities for phpgdo GDOv7.",
   "dependencies": {
     "jquery": "^3.6.0",
     "jquery-color": "^2.2.0",
