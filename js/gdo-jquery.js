@@ -9,13 +9,13 @@ $(function(){
 	};
 
 	window.GDO.error = function(html, title) {
-//		console.error(html);
-		var dialog = $('<div id="gdo-error-dialog" class="modal">' + html + '</div>');
+		var dialog = $('<div class="gdo-modal modal"><h5>' + title + '</h5><div class="gdt-divider"></div><pre>' + html + '<pre></div>');
 		$('body').append(dialog);
-		dialog.modal({
+		$('body').append('<div class="blocker"></div>');
+		$('.gdo-modal').modal({
 			closeClass: 'icon-remove',
 		});
-		let defer = $.Deferred();
+		var defer = $.Deferred();
 		dialog.on($.modal.CLOSE, function() {
 			dialog.remove();
 			defer.resolve();
@@ -23,13 +23,8 @@ $(function(){
 		return defer.promise();
 	};
 
-//	$.ajaxSetup({
-//		headers: {
-//			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//		},
-//        xhrFields: {
-//	         withCredentials: true
-//	    }
-//	});
+	$(window.document).ajaxError(function(event, jqxhr, settings, thrownError) {
+		return window.GDO.responseError(jqxhr.responseText, thrownError);
+	});
 	
 });
