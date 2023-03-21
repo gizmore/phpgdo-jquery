@@ -1,16 +1,16 @@
 .blocker {
-	z-index: 20;
+    z-index: 20;
 }
 
 .modal.gdo-modal {
-	display: block;
-	position: fixed;
-	left: 20vw;
-	top: 20vh;
-	width: 60vw;
-	height: 60vh;
-	max-width: initial;
-	z-index: 100000;
-/* 	left: 50%; */
-/* 	translate: 0 -50%; */
+    display: block;
+    position: fixed;
+    left: 20vw;
+    top: 20vh;
+    width: 60vw;
+    height: 60vh;
+    max-width: initial;
+    z-index: 100000;
+    /* 	left: 50%; */
+    /* 	translate: 0 -50%; */
 }
